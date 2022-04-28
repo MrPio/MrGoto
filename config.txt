@@ -1,0 +1,12 @@
+ELETTROMAGNETISMO=1-8:2-8:4-8;
+ELETTRONICA=1-13:2-10:3-8:3-16;
+~
+RUN ./EmMeetingSelector.py;
+CLICK ui\join.png;
+CLICK ui\join_now.png;
+REC;
+~
+RUN ./FeMeetingSelector.py;
+SLEEP 4;
+CLICK ui\join_now.png;
+REC;

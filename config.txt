@@ -1,5 +1,5 @@
 ELETTROMAGNETISMO=1-8:2-8:4-8;
-ELETTRONICA=1-13:2-10:3-8:3-16;
+ELETTRONICA=1-13:2-10:3-8;
 ~
 RUN ./EmMeetingSelector.py;
 CLICK ui\join.png;

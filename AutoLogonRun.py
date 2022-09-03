@@ -13,7 +13,7 @@ import MrCrypto as Mc
 from pywinauto import Application
 
 
-def wait_for_element_appear(element_path: str, wait=8.0, confidence=0.9, grayscale=False):
+def wait_for_element_appear(element_path: str, wait=8.0, confidence=0.7, grayscale=False):
     start = time.time()
     while True:
         element = pyautogui.locateOnScreen(element_path, grayscale=grayscale, confidence=confidence)
@@ -121,7 +121,10 @@ def execute_instruction(code, value, rec):
     elif rec and code == 'REC':
         bring_to_top(get_pid_by_name("obs64.exe"),fullscreen=False)
         click_center(wait_for_element_appear("ui\obs_rec.png"))
-        bring_to_top(get_pid_by_name("Teams.exe"))
+        pyautogui.keyDown('alt')
+        pyautogui.press('tab')
+        pyautogui.keyUp('alt')
+        # bring_to_top(get_pid_by_name("Teams.exe"))
 
 
 def bring_to_top(pid_list: [],fullscreen=True):
